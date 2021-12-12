@@ -1,0 +1,23 @@
+For Jenkins..
+
+Go to Your Project > Configure > Post-build Actions > Editable Email Notification.
+
+Then click on Advanced Settings....
+
+There is a box named Pre-send Script.
+
+def reportPath = build.getWorkspace().child("test-output/emailable-report.html") 
+msg.setContent(reportPath.readToString(), "text/html");
+Copy that and paste it into the box. Then Save it. That will generate the colourfull page and you can send it as a report via email.
+
+======================================================================================================================
+
+First install "Email Extension Plugin" on your Jenkins.
+You need to set up SMTP server, SMTP port etc of your email provider, in your Jenkins configuration under your newly installed Email Extension Plugin section with all relevant details such as email id and password also.
+Now in your project configuration add this plugin in your post build actions.
+Add relevant email id's in your recipients list.
+5. You will see a field named "Attachments"
+
+6. In that field just enter: **/emailable-report.html
+
+It will fetch "emailable-report.html" file in your project workspace and send it as an attachment after build, depending upon your email trigger.
