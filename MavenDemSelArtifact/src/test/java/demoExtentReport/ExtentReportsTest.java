@@ -36,7 +36,7 @@ public class ExtentReportsTest {
 	WebDriver driver;
 	@BeforeTest
 	public void startReport(){
-	 htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/extent-reports/"+new SimpleDateFormat("hh-mm-ss-ms-dd-MM-yy").format(new Date(0))+".html");
+	 htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/extent-reports/"+new SimpleDateFormat("hh-mm-ss-ms-dd-MM-yy").format(new Date(1))+".html");
 	 extent = new ExtentReports();
 	 extent.attachReporter(htmlReporter);
 	 extent.setSystemInfo("Host Name", "Testing Stream");
@@ -59,7 +59,7 @@ public class ExtentReportsTest {
 	@Test
 	public void failDemoWebShopTest() throws InterruptedException{
 	 logger = extent.createTest("failTest");
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\r.b.ramamurthy\\git\\repository3\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sony\\git\\PracticeDemo\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
 //	 driver=DriverUtility.supplyDriver("chrome");
 	 driver = new ChromeDriver();
 	 driver.manage().window().maximize();

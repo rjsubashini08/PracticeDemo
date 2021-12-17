@@ -23,7 +23,7 @@ public class AutoCompleteDemo {
 		//no need to do further iterations so give break
 		
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\r.b.ramamurthy\\eclipse-workspace\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sony\\git\\PracticeDemo\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
 		driver=new ChromeDriver();//Launch the Chrome Browser
 		Thread.sleep(5000);
 		System.out.println("Browser launched");

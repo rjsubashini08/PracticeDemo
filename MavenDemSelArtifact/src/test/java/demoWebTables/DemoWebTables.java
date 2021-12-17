@@ -25,6 +25,7 @@ public class DemoWebTables {
 		
 		//*[@id="customers"]/tbody/tr[1]/th[1]
 		//*[@id="customers"]/tbody/tr[1]/th[2]
+		
 		//*[@id="customers"]/tbody/tr[2]/td[1]
 		//*[@id="customers"]/tbody/tr[3]/td[1]
 		//*[@id="customers"]/tbody/tr[4]/td[1]
@@ -34,7 +35,7 @@ public class DemoWebTables {
 		//*[@id="customers"]/tbody/tr[2]/td[3]
 		//*[@id="customers"]/tbody/tr[3]/td[3]
 		//*[@id="customers"]/tbody/tr[7]/td[1]
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\r.b.ramamurthy\\eclipse-workspace\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sony\\git\\PracticeDemo\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
 		driver=new ChromeDriver();//Launch the Chrome Browser
 		Thread.sleep(5000);
 		System.out.println("Browser launched");

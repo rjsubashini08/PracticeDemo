@@ -26,18 +26,18 @@ public class ExtentDemo {
 	public static void startTest()
 	{
 	report = new ExtentReports(System.getProperty("user.dir")+"/RelevanceCodeextent-reports/Relevancesnapshots/"+"ExtentReportResults.html");
-	test = report.startTest("ExtentDemo");
+	test = report.startTest("ExtentDemo Title page goes here");
 	}
 	@Test
 	public void extentReportsDemo( ) throws InterruptedException, IOException
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\r.b.ramamurthy\\git\\repository3\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sony\\git\\PracticeDemo\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
 		driver=new ChromeDriver();//Launch the Chrome Browser
 		Thread.sleep(5000);
 		System.out.println("Browser launched");
 	driver.get("https://www.google.co.in");
 	Thread.sleep(3000);
-	if(driver.getTitle().equals("Google"))
+	if(driver.getTitle().equals("Googlesss"))
 	{
 	test.log(LogStatus.PASS, "Navigated to the specified URL");
 	}
@@ -48,7 +48,8 @@ public class ExtentDemo {
 	  File src=snapshot.getScreenshotAs(OutputType.FILE);
 	  String path=System.getProperty("user.dir") +"/RelevanceCodeextent-reports/Relevancesnapshots/snap1.png";
 	  FileUtils.copyFile(src, new File(path));
-//	  test.addScreenCapture(path);
+	  test.addScreenCapture(path);
+	  
 	  
 	}
 	}

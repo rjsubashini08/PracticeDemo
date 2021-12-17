@@ -10,7 +10,7 @@ static WebDriver driver;
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\r.b.ramamurthy\\git\\repository3\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sony\\git\\PracticeDemo\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
 		driver=new ChromeDriver();//Launch the Chrome Browser
 		Thread.sleep(5000);
 		System.out.println("Browser launched");
@@ -20,7 +20,7 @@ static WebDriver driver;
         WebElement uploadElement = driver.findElement(By.id("uploadfile_0"));
 
         // enter the file path onto the file-selection input field
-        uploadElement.sendKeys("C:\\Failuretest.png");
+        uploadElement.sendKeys("C:\\fail.png");
 
         // check the "I accept the terms of service" check box
         driver.findElement(By.id("terms")).click();

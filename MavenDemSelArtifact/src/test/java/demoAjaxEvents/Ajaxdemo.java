@@ -19,21 +19,25 @@ public class Ajaxdemo {
 	
 	@BeforeClass
 	public void setUp() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\r.b.ramamurthy\\git\\repository3\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sony\\git\\PracticeDemo\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
 		driver=new ChromeDriver();//Launch the Chrome Browser
 		Thread.sleep(5000);
 		System.out.println("Browser launched");
 //	driver.manage().window().maximize();//Maximize the chrome browser
 	//Open the application
 		driver.navigate().to(URL);
+//		driver.get("http://demo.guru99.com/test/ajax.html");
 	}
 	
 	@Test
-	public void test_AjaxExample() {
+	public void test_AjaxExample() throws InterruptedException {
 
 		By container = By.cssSelector(".container");
+		//explicit-particular element,partcular time,particular cndn
 		wait = new WebDriverWait(driver, 5);
 		wait.until(ExpectedConditions.presenceOfElementLocated(container));
+		Thread.sleep(5000);
+//		ExpectedConditions.
 		
 		//Get the text before performing an ajax call
 		WebElement noTextElement = driver.findElement(By.className("radiobutton"));
@@ -44,6 +48,7 @@ public class Ajaxdemo {
 	
 		//Click on Check Button
 		driver.findElement(By.id("buttoncheck")).click();
+		Thread.sleep(5000);
 		
 		/*Get the text after ajax call*/
 		WebElement TextElement = driver.findElement(By.className("radiobutton"));
